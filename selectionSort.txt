@@ -1,0 +1,21 @@
+selection sort 
+1.it has time complexity of O(n*n)
+void selectionSort(int *a,int n){
+    for(int i=0;i<n-1;i++){
+        int minElement=i; /// This lines take c1 time and execute n-1 times : c1*(n-1)
+        
+        for(int j=i+1;j<n;j++){ /// This lines or loop take c2 time and exicute (n-1)+(n-2)+(n-3)+...1 times : c1*(n)(n-1)/2
+            if(a[j]<a[i]){      ///
+                minElement = j;
+            }
+        }
+        int temp = a[i];  ///below three lines will take c3 and execute n-1 times : c3(n-1)
+        a[i]=a[minElement];
+        a[minElement]=temp;
+    }
+
+}
+
+*** so : time complexity --> c1*(n-1)+c2*(n)(n-1)/2+c3*(n-1)
+                             equivalent to ax^2+bx+c
+                             hence O(n*n)
