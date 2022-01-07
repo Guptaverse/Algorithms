@@ -1,4 +1,4 @@
-Here i am making this repository for different sorting and searching algorithms 
+Here i am making this repository for different sorting and searching algorithms <br>
 1.Selection sort added <br>
 2.Bubble sort
 <p align="center">
